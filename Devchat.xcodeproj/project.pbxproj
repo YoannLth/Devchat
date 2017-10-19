@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7AD1F992B1900B7689D /* AppDelegate.swift */; };
-		CD8AB7B01F992B1900B7689D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7AF1F992B1900B7689D /* ViewController.swift */; };
+		CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7AF1F992B1900B7689D /* CameraVC.swift */; };
 		CD8AB7B31F992B1900B7689D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8AB7B11F992B1900B7689D /* Main.storyboard */; };
 		CD8AB7B51F992B1900B7689D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8AB7B41F992B1900B7689D /* Assets.xcassets */; };
 		CD8AB7B81F992B1900B7689D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8AB7B61F992B1900B7689D /* LaunchScreen.storyboard */; };
+		CD8AB7C61F9950F600B7689D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CD8AB7C51F9950F600B7689D /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD8AB7AA1F992B1900B7689D /* Devchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8AB7AD1F992B1900B7689D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD8AB7AF1F992B1900B7689D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD8AB7AF1F992B1900B7689D /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		CD8AB7B21F992B1900B7689D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD8AB7B41F992B1900B7689D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD8AB7B71F992B1900B7689D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD8AB7B91F992B1A00B7689D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8AB7C51F9950F600B7689D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,63 @@
 		CD8AB7AC1F992B1900B7689D /* Devchat */ = {
 			isa = PBXGroup;
 			children = (
+				CD8AB7C41F992BBC00B7689D /* Ressources */,
+				CD8AB7C31F992BAB00B7689D /* Services */,
+				CD8AB7C21F992B8E00B7689D /* Config */,
+				CD8AB7C11F992B8200B7689D /* Controllers */,
+				CD8AB7C01F992B7B00B7689D /* Views */,
+				CD8AB7BF1F992B6700B7689D /* Models */,
 				CD8AB7AD1F992B1900B7689D /* AppDelegate.swift */,
-				CD8AB7AF1F992B1900B7689D /* ViewController.swift */,
-				CD8AB7B11F992B1900B7689D /* Main.storyboard */,
-				CD8AB7B41F992B1900B7689D /* Assets.xcassets */,
-				CD8AB7B61F992B1900B7689D /* LaunchScreen.storyboard */,
-				CD8AB7B91F992B1A00B7689D /* Info.plist */,
 			);
 			path = Devchat;
+			sourceTree = "<group>";
+		};
+		CD8AB7BF1F992B6700B7689D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD8AB7C01F992B7B00B7689D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD8AB7B11F992B1900B7689D /* Main.storyboard */,
+				CD8AB7B61F992B1900B7689D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD8AB7C11F992B8200B7689D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD8AB7AF1F992B1900B7689D /* CameraVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD8AB7C21F992B8E00B7689D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CD8AB7C51F9950F600B7689D /* Podfile */,
+				CD8AB7B91F992B1A00B7689D /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CD8AB7C31F992BAB00B7689D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD8AB7C41F992BBC00B7689D /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				CD8AB7B41F992B1900B7689D /* Assets.xcassets */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +176,7 @@
 			files = (
 				CD8AB7B81F992B1900B7689D /* LaunchScreen.storyboard in Resources */,
 				CD8AB7B51F992B1900B7689D /* Assets.xcassets in Resources */,
+				CD8AB7C61F9950F600B7689D /* Podfile in Resources */,
 				CD8AB7B31F992B1900B7689D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8AB7B01F992B1900B7689D /* ViewController.swift in Sources */,
+				CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */,
 				CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
