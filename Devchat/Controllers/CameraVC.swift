@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CameraVC: CameraViewController {
 
@@ -15,6 +16,7 @@ class CameraVC: CameraViewController {
   
   override func viewDidLoad() {
     self._previewView = previewView
+    self._previewView.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     
     super.viewDidLoad()
   }

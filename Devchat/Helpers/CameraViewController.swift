@@ -24,7 +24,8 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 		captureModeControl?.isEnabled = false
 		
 		// Set up the video preview view.
-		_previewView.session = session
+    _previewView.session = session
+      
 		
 		/*
 			Check video authorization status. Video access is required and audio
