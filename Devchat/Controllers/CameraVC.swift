@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CameraVC: CameraViewController {
+class CameraVC: AAPLCameraViewController {
 
   
-  @IBOutlet weak var previewView: PreviewView!
+  @IBOutlet weak var previewView: AAPLPreviewView!
   
   override func viewDidLoad() {
     self._previewView = previewView
