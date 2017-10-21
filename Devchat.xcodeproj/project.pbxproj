@@ -16,9 +16,13 @@
 		CD8AB7CE1F99548F00B7689D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7CD1F99547B00B7689D /* CameraViewController.swift */; };
 		CD8AB7CF1F99549300B7689D /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7CC1F99547B00B7689D /* PhotoCaptureDelegate.swift */; };
 		CD8AB7D01F99549300B7689D /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7CB1F99547A00B7689D /* PreviewView.swift */; };
+		CDF4014C1F9BA45A006B02AE /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */; };
+		EAB722A52F8E6399ACB3DF26 /* Pods_Devchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A2FE3EC80775D8B63DFCFF /* Pods_Devchat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40A2FE3EC80775D8B63DFCFF /* Pods_Devchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Devchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D26A654365D6F957AE6524D /* Pods-Devchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Devchat/Pods-Devchat.release.xcconfig"; sourceTree = "<group>"; };
 		CD8AB7AA1F992B1900B7689D /* Devchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8AB7AD1F992B1900B7689D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD8AB7AF1F992B1900B7689D /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -32,6 +36,9 @@
 		CD8AB7CB1F99547A00B7689D /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		CD8AB7CC1F99547B00B7689D /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		CD8AB7CD1F99547B00B7689D /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CDF043361F9BEFC700BC85E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
+		FDB7E7F9C8B2C8B8ED247249 /* Pods-Devchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Devchat/Pods-Devchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB722A52F8E6399ACB3DF26 /* Pods_Devchat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520E5AACDEA7B2A73588C210 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40A2FE3EC80775D8B63DFCFF /* Pods_Devchat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81A5148B4E5EF79CF5D11534 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7E7F9C8B2C8B8ED247249 /* Pods-Devchat.debug.xcconfig */,
+				6D26A654365D6F957AE6524D /* Pods-Devchat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD8AB7A11F992B1900B7689D = {
 			isa = PBXGroup;
 			children = (
 				CD8AB7AC1F992B1900B7689D /* Devchat */,
 				CD8AB7AB1F992B1900B7689D /* Products */,
+				81A5148B4E5EF79CF5D11534 /* Pods */,
+				520E5AACDEA7B2A73588C210 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +130,7 @@
 		CD8AB7C21F992B8E00B7689D /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				CDF043361F9BEFC700BC85E3 /* GoogleService-Info.plist */,
 				CD8AB7C51F9950F600B7689D /* Podfile */,
 				CD8AB7B91F992B1A00B7689D /* Info.plist */,
 				CD8AB7C71F99515400B7689D /* .gitignore */,
@@ -132,6 +160,7 @@
 				CD8AB7CD1F99547B00B7689D /* CameraViewController.swift */,
 				CD8AB7CC1F99547B00B7689D /* PhotoCaptureDelegate.swift */,
 				CD8AB7CB1F99547A00B7689D /* PreviewView.swift */,
+				CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -143,10 +172,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD8AB7BC1F992B1A00B7689D /* Build configuration list for PBXNativeTarget "Devchat" */;
 			buildPhases = (
+				1E741EC99251303281BD9E6B /* [CP] Check Pods Manifest.lock */,
 				CD8AB7A61F992B1900B7689D /* Sources */,
 				CD8AB7A71F992B1900B7689D /* Frameworks */,
 				CD8AB7A81F992B1900B7689D /* Resources */,
 				CD8AB7C91F99518300B7689D /* ShellScript */,
+				A7B18663D38745EF43C0718C /* [CP] Embed Pods Frameworks */,
+				E6D748ADE82C108AF3D90598 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +238,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E741EC99251303281BD9E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Devchat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B18663D38745EF43C0718C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Devchat/Pods-Devchat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Devchat/Pods-Devchat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD8AB7C91F99518300B7689D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +295,21 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		E6D748ADE82C108AF3D90598 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Devchat/Pods-Devchat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,6 +321,7 @@
 				CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */,
 				CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */,
 				CD8AB7CF1F99549300B7689D /* PhotoCaptureDelegate.swift in Sources */,
+				CDF4014C1F9BA45A006B02AE /* CameraVCDelegate.swift in Sources */,
 				CD8AB7CE1F99548F00B7689D /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +457,7 @@
 		};
 		CD8AB7BD1F992B1A00B7689D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB7E7F9C8B2C8B8ED247249 /* Pods-Devchat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +473,7 @@
 		};
 		CD8AB7BE1F992B1A00B7689D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D26A654365D6F957AE6524D /* Pods-Devchat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

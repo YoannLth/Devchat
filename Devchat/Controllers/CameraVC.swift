@@ -9,12 +9,34 @@
 import UIKit
 import AVFoundation
 
-class CameraVC: CameraViewController {
+class CameraVC: CameraViewController, CameraVCDelegate {
+  func shouldEnableRecordUI(enable: Bool) {
+    recordingButton.isEnabled = enable
+    print("Ish ish")
+  }
+  
+  func shouldEnableCameraUI(enable: Bool) {
+    changeCameraButton.isEnabled = enable
+    print("93 empire")
+  }
+  
+  func canStartRecording() {
+    print("Can start recording")
+  }
+  
+  func recordingHasStarted() {
+    print("Recording has started")
+  }
+  
 
   
   @IBOutlet weak var previewView: PreviewView!
+  @IBOutlet weak var changeCameraButton: UIButton!
+  @IBOutlet weak var recordingButton: UIButton!
   
   override func viewDidLoad() {
+    self.delegate = self
+    
     self._previewView = previewView
     self._previewView.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     
@@ -27,9 +49,17 @@ class CameraVC: CameraViewController {
   
   // MARK: - Actions
   @IBAction func recordButtonPressed(_ sender: Any) {
+    initRecording()
     toggleMovieRecording()
   }
   @IBAction func changeCameraButtonPressed(_ sender: Any) {
     changeCamera()
   }
+  
+  
+  
+  
+  
+  // MARK: - Functions
+  
 }
