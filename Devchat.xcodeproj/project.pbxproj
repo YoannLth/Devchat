@@ -17,6 +17,8 @@
 		CD8AB7CF1F99549300B7689D /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7CC1F99547B00B7689D /* PhotoCaptureDelegate.swift */; };
 		CD8AB7D01F99549300B7689D /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7CB1F99547A00B7689D /* PreviewView.swift */; };
 		CDF4014C1F9BA45A006B02AE /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */; };
+		CDFBD0D41F9D595E00B83E2C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD0D31F9D595E00B83E2C /* RoundedTextField.swift */; };
+		CDFBD0D61F9D5DB200B83E2C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD0D51F9D5DB200B83E2C /* RoundedButton.swift */; };
 		EAB722A52F8E6399ACB3DF26 /* Pods_Devchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A2FE3EC80775D8B63DFCFF /* Pods_Devchat.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		CD8AB7CD1F99547B00B7689D /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CDF043361F9BEFC700BC85E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
+		CDFBD0D31F9D595E00B83E2C /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		CDFBD0D51F9D5DB200B83E2C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FDB7E7F9C8B2C8B8ED247249 /* Pods-Devchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Devchat/Pods-Devchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,8 @@
 			children = (
 				CD8AB7B11F992B1900B7689D /* Main.storyboard */,
 				CD8AB7B61F992B1900B7689D /* LaunchScreen.storyboard */,
+				CDFBD0D51F9D5DB200B83E2C /* RoundedButton.swift */,
+				CDFBD0D31F9D595E00B83E2C /* RoundedTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,9 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFBD0D61F9D5DB200B83E2C /* RoundedButton.swift in Sources */,
 				CD8AB7D01F99549300B7689D /* PreviewView.swift in Sources */,
 				CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */,
 				CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */,
+				CDFBD0D41F9D595E00B83E2C /* RoundedTextField.swift in Sources */,
 				CD8AB7CF1F99549300B7689D /* PhotoCaptureDelegate.swift in Sources */,
 				CDF4014C1F9BA45A006B02AE /* CameraVCDelegate.swift in Sources */,
 				CD8AB7CE1F99548F00B7689D /* CameraViewController.swift in Sources */,
