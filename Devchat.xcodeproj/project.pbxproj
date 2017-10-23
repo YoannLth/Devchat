@@ -19,6 +19,9 @@
 		CDF4014C1F9BA45A006B02AE /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */; };
 		CDFBD0D41F9D595E00B83E2C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD0D31F9D595E00B83E2C /* RoundedTextField.swift */; };
 		CDFBD0D61F9D5DB200B83E2C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD0D51F9D5DB200B83E2C /* RoundedButton.swift */; };
+		CDFBD0D81F9D5FBE00B83E2C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD0D71F9D5FBE00B83E2C /* LoginVC.swift */; };
+		CDFBD0D91F9D604200B83E2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF043361F9BEFC700BC85E3 /* GoogleService-Info.plist */; };
+		CDFBD0DB1F9D626E00B83E2C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD0DA1F9D626E00B83E2C /* AuthService.swift */; };
 		EAB722A52F8E6399ACB3DF26 /* Pods_Devchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A2FE3EC80775D8B63DFCFF /* Pods_Devchat.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,8 @@
 		CDF4014B1F9BA45A006B02AE /* CameraVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 		CDFBD0D31F9D595E00B83E2C /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		CDFBD0D51F9D5DB200B83E2C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CDFBD0D71F9D5FBE00B83E2C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CDFBD0DA1F9D626E00B83E2C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		FDB7E7F9C8B2C8B8ED247249 /* Pods-Devchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Devchat/Pods-Devchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				CD8AB7AF1F992B1900B7689D /* CameraVC.swift */,
+				CDFBD0D71F9D5FBE00B83E2C /* LoginVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 		CD8AB7C31F992BAB00B7689D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CDFBD0DA1F9D626E00B83E2C /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 			files = (
 				CD8AB7B81F992B1900B7689D /* LaunchScreen.storyboard in Resources */,
 				CD8AB7B51F992B1900B7689D /* Assets.xcassets in Resources */,
+				CDFBD0D91F9D604200B83E2C /* GoogleService-Info.plist in Resources */,
 				CD8AB7C61F9950F600B7689D /* Podfile in Resources */,
 				CD8AB7B31F992B1900B7689D /* Main.storyboard in Resources */,
 			);
@@ -328,7 +336,9 @@
 				CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */,
 				CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */,
 				CDFBD0D41F9D595E00B83E2C /* RoundedTextField.swift in Sources */,
+				CDFBD0D81F9D5FBE00B83E2C /* LoginVC.swift in Sources */,
 				CD8AB7CF1F99549300B7689D /* PhotoCaptureDelegate.swift in Sources */,
+				CDFBD0DB1F9D626E00B83E2C /* AuthService.swift in Sources */,
 				CDF4014C1F9BA45A006B02AE /* CameraVCDelegate.swift in Sources */,
 				CD8AB7CE1F99548F00B7689D /* CameraViewController.swift in Sources */,
 			);

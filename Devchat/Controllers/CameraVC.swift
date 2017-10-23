@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAuth
 
 class CameraVC: CameraViewController, CameraVCDelegate {
   func shouldEnableRecordUI(enable: Bool) {
@@ -43,7 +44,12 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     super.viewDidLoad()
   }
   
-  
+  override func viewDidAppear(_ animated: Bool) {
+    guard Auth.auth().currentUser != nil else {
+      performSegue(withIdentifier: "homeToLogin", sender: nil)
+      return
+    }
+  }
   
   
   

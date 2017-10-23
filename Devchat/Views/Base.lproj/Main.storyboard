@@ -68,16 +68,17 @@
                         <outlet property="previewView" destination="TXR-19-9Lz" id="ion-vA-0TA"/>
                         <outlet property="recordButton" destination="fzi-CO-Ox7" id="SjO-VK-PmG"/>
                         <outlet property="recordingButton" destination="fzi-CO-Ox7" id="6og-Ng-Igi"/>
+                        <segue destination="oEx-4E-y1A" kind="presentation" identifier="homeToLogin" id="zR5-wZ-dOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="n3B-e1-l9Y">
             <objects>
-                <viewController id="oEx-4E-y1A" sceneMemberID="viewController">
+                <viewController id="oEx-4E-y1A" customClass="LoginVC" customModule="Devchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhK-az-wDD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,6 +159,9 @@
                                         <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="oEx-4E-y1A" eventType="touchUpInside" id="77B-5A-2sl"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kDA-wj-BF3">
                                 <rect key="frame" x="91.5" y="70" width="192" height="60"/>
@@ -209,6 +213,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lew-f4-WvR"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="I8f-Oe-eag" id="b4Z-aA-6Gh"/>
+                        <outlet property="passwordField" destination="ix7-fZ-2gg" id="njZ-yQ-KnT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmt-mm-ZjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
