@@ -23,7 +23,8 @@ class AuthService {
       if let err = error {
         self.handleFirebaseError(error: err, onComplete: onComplete)
       } else {
-        if user?.uid != nil {
+        if let userUID = user?.uid {
+          DataService.sharedInstance.saveUser(uid: userUID)
           self.login(email: email, password: password, onComplete: onComplete)
         }
       }

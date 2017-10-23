@@ -122,6 +122,33 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         }
       }
     }
+    
+    sessionQueue.async {
+      let movieFileOutput = AVCaptureMovieFileOutput()
+      
+      if self.session.canAddOutput(movieFileOutput) {
+        self.session.beginConfiguration()
+        self.session.addOutput(movieFileOutput)
+        self.session.sessionPreset = .high
+        if let connection = movieFileOutput.connection(with: .video) {
+          if connection.isVideoStabilizationSupported {
+            connection.preferredVideoStabilizationMode = .auto
+          }
+        }
+        self.session.commitConfiguration()
+        
+        DispatchQueue.main.async {
+          self.captureModeControl?.isEnabled = true
+        }
+        
+        self.movieFileOutput = movieFileOutput
+        
+        DispatchQueue.main.async {
+          //self.recordButton?.isEnabled = true
+          self.delegate.shouldEnableRecordUI(enable: true)
+        }
+      }
+    }
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -789,30 +816,34 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     if error != nil {
       print("Movie file finishing error: \(String(describing: error))")
       success = (((error! as NSError).userInfo[AVErrorRecordingSuccessfullyFinishedKey] as AnyObject).boolValue)!
+      delegate.videoRecordingFailed()
     }
     
     if success {
+      delegate.videoRecordingComplete(videoURL: outputFileURL)
+      // MARK: - Apple code to save photo to library
       // Check authorization status.
-      PHPhotoLibrary.requestAuthorization { status in
-        if status == .authorized {
-          // Save the movie file to the photo library and cleanup.
-          PHPhotoLibrary.shared().performChanges({
-            let options = PHAssetResourceCreationOptions()
-            options.shouldMoveFile = true
-            let creationRequest = PHAssetCreationRequest.forAsset()
-            creationRequest.addResource(with: .video, fileURL: outputFileURL, options: options)
-          }, completionHandler: { success, error in
-            if !success {
-              print("Could not save movie to photo library: \(String(describing: error))")
-            }
-            cleanUp()
-          }
-          )
-        } else {
-          cleanUp()
-        }
-      }
+//      PHPhotoLibrary.requestAuthorization { status in
+//        if status == .authorized {
+//          // Save the movie file to the photo library and cleanup.
+//          PHPhotoLibrary.shared().performChanges({
+//            let options = PHAssetResourceCreationOptions()
+//            options.shouldMoveFile = true
+//            let creationRequest = PHAssetCreationRequest.forAsset()
+//            creationRequest.addResource(with: .video, fileURL: outputFileURL, options: options)
+//          }, completionHandler: { success, error in
+//            if !success {
+//              print("Could not save movie to photo library: \(String(describing: error))")
+//            }
+//            cleanUp()
+//          }
+//          )
+//        } else {
+//          cleanUp()
+//        }
+//      }
     } else {
+      delegate.videoRecordingFailed()
       cleanUp()
     }
     
