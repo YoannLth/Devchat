@@ -12,6 +12,7 @@ def all_pods
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Kingfisher'
+  pod 'Player', '~> 0.8.0'
 end
 
 target 'Devchat' do

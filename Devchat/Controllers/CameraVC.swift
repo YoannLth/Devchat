@@ -82,7 +82,10 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     changeCamera()
   }
   
-  
+    @IBAction func messageButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "cameraToMessagesVC", sender: nil)
+    }
+    
   
   
   

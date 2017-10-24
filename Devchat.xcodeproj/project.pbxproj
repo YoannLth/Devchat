@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD8A96771F9EA97F002779C8 /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A96761F9EA97F002779C8 /* MessagesVC.swift */; };
+		CD8A96791F9EAC23002779C8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A96781F9EAC23002779C8 /* MessageCell.swift */; };
+		CD8A967B1F9EAD10002779C8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A967A1F9EAD10002779C8 /* Message.swift */; };
 		CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7AD1F992B1900B7689D /* AppDelegate.swift */; };
 		CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8AB7AF1F992B1900B7689D /* CameraVC.swift */; };
 		CD8AB7B31F992B1900B7689D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8AB7B11F992B1900B7689D /* Main.storyboard */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		40A2FE3EC80775D8B63DFCFF /* Pods_Devchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Devchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D26A654365D6F957AE6524D /* Pods-Devchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Devchat/Pods-Devchat.release.xcconfig"; sourceTree = "<group>"; };
+		CD8A96761F9EA97F002779C8 /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
+		CD8A96781F9EAC23002779C8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		CD8A967A1F9EAD10002779C8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CD8AB7AA1F992B1900B7689D /* Devchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8AB7AD1F992B1900B7689D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD8AB7AF1F992B1900B7689D /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -39,7 +45,7 @@
 		CD8AB7B41F992B1900B7689D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD8AB7B71F992B1900B7689D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD8AB7B91F992B1A00B7689D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8AB7C51F9950F600B7689D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		CD8AB7C51F9950F600B7689D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CD8AB7C71F99515400B7689D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		CD8AB7C81F99515400B7689D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		CD8AB7CB1F99547A00B7689D /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CDFBD0E21F9D73BC00B83E2C /* User.swift */,
+				CD8A967A1F9EAD10002779C8 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 				CDFBD0D51F9D5DB200B83E2C /* RoundedButton.swift */,
 				CDFBD0D31F9D595E00B83E2C /* RoundedTextField.swift */,
 				CDFBD0E01F9D71E300B83E2C /* UserCell.swift */,
+				CD8A96781F9EAC23002779C8 /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 				CD8AB7AF1F992B1900B7689D /* CameraVC.swift */,
 				CDFBD0D71F9D5FBE00B83E2C /* LoginVC.swift */,
 				CDFBD0DE1F9D70F900B83E2C /* UsersVC.swift */,
+				CD8A96761F9EA97F002779C8 /* MessagesVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -300,6 +310,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -344,8 +355,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFBD0D61F9D5DB200B83E2C /* RoundedButton.swift in Sources */,
+				CD8A96791F9EAC23002779C8 /* MessageCell.swift in Sources */,
 				CDFBD0E11F9D71E300B83E2C /* UserCell.swift in Sources */,
+				CD8A967B1F9EAD10002779C8 /* Message.swift in Sources */,
 				CD8AB7D01F99549300B7689D /* PreviewView.swift in Sources */,
+				CD8A96771F9EA97F002779C8 /* MessagesVC.swift in Sources */,
 				CD8AB7B01F992B1900B7689D /* CameraVC.swift in Sources */,
 				CD8AB7AE1F992B1900B7689D /* AppDelegate.swift in Sources */,
 				CDFBD0D41F9D595E00B83E2C /* RoundedTextField.swift in Sources */,
