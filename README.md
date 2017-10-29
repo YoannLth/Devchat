@@ -7,6 +7,10 @@ Simple Snapchat clone
 * Work with Firebase
 
 ## Screenshots
-Login page                                |Home page                                 |Snaps page                                |Snap page                                 
-:----------------------------------------:|:----------------------------------------:|:----------------------------------------:|:----------------------------------------:
-![](/Assets/Screenshots/login.PNG?raw=true)  |  ![](/Assets/Screenshots/home.png?raw=true)  |  ![](/Assets/Screenshots/snaps.png?raw=true)  |  ![](/Assets/Screenshots/snap.png?raw=true)
+Home page                            |            Video view
+:-----------------------------------:|:--------------------------------------:
+![](/Assets/Screenshots/login.PNG?raw=true)  |  ![](/Assets/Screenshots/home.PNG?raw=true)
+
+Home page                            |            Video view
+:-----------------------------------:|:--------------------------------------:
+![](/Assets/Screenshots/snaps.PNG?raw=true)  |  ![](/Assets/Screenshots/snap.PNG?raw=true)
