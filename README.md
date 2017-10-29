@@ -9,4 +9,4 @@ Simple Snapchat clone
 ## Screenshots
 Login page                                |Home page                                 |Snaps page                                |Snap page                                 
 :----------------------------------------:|:----------------------------------------:|:----------------------------------------:|:----------------------------------------:
-![](/Assets/Screenshots/login.PNG?raw=true) |![](/Assets/Screenshots/home.png?raw=true) |![](/Assets/Screenshots/snaps.png?raw=true)| ![](/Assets/Screenshots/snap.png?raw=true)
+![](/Assets/Screenshots/login.PNG?raw=true)  |  ![](/Assets/Screenshots/home.png?raw=true)  |  ![](/Assets/Screenshots/snaps.png?raw=true)  |  ![](/Assets/Screenshots/snap.png?raw=true)
