@@ -10,14 +10,14 @@ import UIKit
 
 class UserCell: UITableViewCell {
   
+  // MARK: - Outlets
   @IBOutlet weak var username: UILabel!
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    
-    self.setCheckmark(selected: false)
-  }
   
+  
+  
+  
+  // MARK: - Functions
   func updateUI(user: User) {
     self.username.text = user.firstname
   }
@@ -25,5 +25,11 @@ class UserCell: UITableViewCell {
   func setCheckmark(selected: Bool) {
     let imgStr = selected ? "messageindicatorchecked1" : "messageindicator1"
     self.accessoryView = UIImageView(image: UIImage(named: imgStr))
+  }
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    self.setCheckmark(selected: false)
   }
 }

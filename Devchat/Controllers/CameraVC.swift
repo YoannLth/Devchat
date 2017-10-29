@@ -11,6 +11,42 @@ import AVFoundation
 import FirebaseAuth
 
 class CameraVC: CameraViewController, CameraVCDelegate {
+  
+  // MARK: - Outlets
+  @IBOutlet weak var previewView: PreviewView!
+  @IBOutlet weak var changeCameraButton: UIButton!
+  @IBOutlet weak var recordingButton: UIButton!
+  
+  
+  
+  
+  
+  // MARK: - Actions
+  @IBAction func recordButtonPressed(_ sender: Any) {
+    initRecording()
+    toggleMovieRecording()
+  }
+  
+  @IBAction func changeCameraButtonPressed(_ sender: Any) {
+    changeCamera()
+  }
+  
+  @IBAction func messageButtonPressed(_ sender: Any) {
+    performSegue(withIdentifier: "cameraToMessagesVC", sender: nil)
+  }
+  
+  
+  
+  
+  // MARK: - Functions
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let userVC = segue.destination as? UsersVC {
+      if let dict = sender as? Dictionary<String, URL>, let url = dict["videoURL"] {
+        userVC.videoURL = url
+      }
+    }
+  }
+  
   func videoRecordingComplete(videoURL: URL) {
     performSegue(withIdentifier: "cameraToUsersVC", sender: ["videoURL": videoURL])
   }
@@ -44,13 +80,14 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     print("Recording has started")
     recordingButton.imageView?.tintColor = UIColor.red
   }
-  
+}
 
-  
-  @IBOutlet weak var previewView: PreviewView!
-  @IBOutlet weak var changeCameraButton: UIButton!
-  @IBOutlet weak var recordingButton: UIButton!
-  
+
+
+
+
+// MARK: - Lifecycle
+extension CameraVC {
   override func viewDidLoad() {
     self.delegate = self
     
@@ -58,43 +95,12 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     self._previewView.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     
     super.viewDidLoad()
-    
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    //performSegue(withIdentifier: "homeToLogin", sender: nil)
-    
     guard Auth.auth().currentUser != nil else {
       performSegue(withIdentifier: "homeToLogin", sender: nil)
       return
-    }
-  }
-  
-  
-  @IBAction func recordButtonPressed(_ sender: Any) {
-    initRecording()
-    toggleMovieRecording()
-  }
-  
-  // MARK: - Actions
-  
-  @IBAction func changeCameraButtonPressed(_ sender: Any) {
-    changeCamera()
-  }
-  
-    @IBAction func messageButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "cameraToMessagesVC", sender: nil)
-    }
-    
-  
-  
-  
-  // MARK: - Functions
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let userVC = segue.destination as? UsersVC {
-      if let dict = sender as? Dictionary<String, URL>, let url = dict["videoURL"] {
-        userVC.videoURL = url
-      }
     }
   }
 }

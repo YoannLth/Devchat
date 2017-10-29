@@ -11,8 +11,33 @@ import Firebase
 
 class UsersVC: UIViewController {
   
+  // MARK: - Variables
+  private var users = [User]()
+  private var selectedUsers = Dictionary<String, User>()
+  private var _imageData: Data?
+  private var _videoURL: URL?
+  
+  var videoURL: URL? {
+    get {
+      return _videoURL
+    }
+    set {
+      _videoURL = newValue
+    }
+  }
+  
+  
+  
+  
+  
+  // MARK: - Outlets
   @IBOutlet weak var tableView: UITableView!
   
+  
+  
+  
+  
+  // MARK: - Actions
   @IBAction func sendSnapPressed(_ sender: Any) {
     if let url = _videoURL {
       let videoName = "\(NSUUID().uuidString)-\(url)"
@@ -37,42 +62,13 @@ class UsersVC: UIViewController {
     }
   }
   
-  private var users = [User]()
-  private var selectedUsers = Dictionary<String, User>()
-  private var _imageData: Data?
-  private var _videoURL: URL?
-  
-  var videoURL: URL? {
-    get {
-      return _videoURL
-    }
-    set {
-      _videoURL = newValue
-    }
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    tableView.delegate = self
-    tableView.dataSource = self
-    tableView.allowsMultipleSelection = true
-    navigationItem.rightBarButtonItem?.isEnabled = true
-    
-    DataService.sharedInstance.getUsers { (error, users) in
-      if let err = error {
-        print(err)
-      } else {
-        if let users = users as? [User] {
-          self.users = users
-          self.tableView.reloadData()
-        }
-      }
-    }
-  }
 }
 
 
+
+
+
+// MARK: - TableView
 extension UsersVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return users.count
@@ -89,7 +85,6 @@ extension UsersVC: UITableViewDataSource {
     return UITableViewCell()
   }
 }
-
 
 extension UsersVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -112,6 +107,33 @@ extension UsersVC: UITableViewDelegate {
       
       if selectedUsers.count <= 0 {
         navigationItem.rightBarButtonItem?.isEnabled = false
+      }
+    }
+  }
+}
+
+
+
+
+
+// MARK: - Lifecycle
+extension UsersVC {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.delegate = self
+    tableView.dataSource = self
+    tableView.allowsMultipleSelection = true
+    navigationItem.rightBarButtonItem?.isEnabled = true
+    
+    DataService.sharedInstance.getUsers { (error, users) in
+      if let err = error {
+        print(err)
+      } else {
+        if let users = users as? [User] {
+          self.users = users
+          self.tableView.reloadData()
+        }
       }
     }
   }

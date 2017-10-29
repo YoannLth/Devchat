@@ -9,6 +9,7 @@
 import Foundation
 
 struct User {
+  // MARK: - Variables
   private var _firstname: String
   private var _uid: String
   
@@ -20,6 +21,11 @@ struct User {
     return _uid
   }
   
+  
+  
+  
+  
+  // MARK: - Initializer
   init(uid: String, firstname: String) {
     self._firstname = firstname
     self._uid = uid

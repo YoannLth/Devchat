@@ -12,12 +12,19 @@ import FirebaseAuth
 typealias Completion = (_ errMessage: String?, _ data: Any?) -> Void
 
 class AuthService {
+  // MARK: - Variables
   private static let _sharedInstance = AuthService()
   
   static var sharedInstance: AuthService {
     return _sharedInstance
   }
   
+  
+  
+  
+  
+  
+  // MARK: - Functions
   func createUser(email: String, password: String, onComplete: Completion?) {
     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
       if let err = error {

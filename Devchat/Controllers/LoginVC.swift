@@ -10,15 +10,14 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+  // MARK: - Outlets
   @IBOutlet weak var emailField: RoundedTextField!
   @IBOutlet weak var passwordField: RoundedTextField!
+
   
-  override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
+  
+  
+  // MARK: - Actions
   @IBAction func loginButtonPressed(_ sender: Any) {
     if let email = emailField.text, let password = passwordField.text, (email.characters.count > 0 && password.characters.count > 0) {
       AuthService.sharedInstance.login(email: email, password: password, onComplete: { (errMsg, data) in
